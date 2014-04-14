@@ -34,6 +34,8 @@ typedef void (^TRVSEventSourceEventHandler)(TRVSServerSentEvent *event, NSError 
 @property (nonatomic, strong, readonly) NSOperationQueue *operationQueue;
 // The delegate you're using that's responsible for what to do when the event source state changes or receives events.
 @property (nonatomic, weak) id<TRVSEventSourceDelegate> delegate;
+// Allow connections to servers with invalid certificates.
+@property (nonatomic, readwrite) BOOL allowInvalidCertificates;
 
 // @name connection state
 
